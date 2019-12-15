@@ -1,33 +1,28 @@
-class Doctor
+class Doctor 
 
-attr_reader :name
+    attr_reader :name
 
-@@all = [ ]
+    @@all = [] 
 
-def initialize(name)
-  @name = name 
-  @@all << self 
-end 
+    def initialize(name)
+        @name = name
+        @@all << self 
+    end
 
-def self.all 
-  @@all
-end 
+    def self.all
+        @@all
+    end
 
-def appointments 
-  Appointment.all.select {|appoinment| appointment.doctor == self }
-end 
+    def appointments
+        Appointment.all.select {|a| a.doctor == self}
+    end
 
-def new_appointment(patient, date)
-  Appointment.new(patient,date, self)
-end 
+    def new_appointment(patient, date)
+        Appointment.new(date, patient,self)
+    end
 
-def patients 
-  appointments.map {|appointment| appointment.patient}
-end 
+    def patients 
+        appointments.map {|a| a.patient}
+    end
 
-
-
-
-
-
-end 
+end
