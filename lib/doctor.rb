@@ -22,7 +22,7 @@ def appointments
 end 
 
 def patients 
-  appointment.map {|song| song.genre}
+  appointments.map {|appointment| .genre}
 
 
 
