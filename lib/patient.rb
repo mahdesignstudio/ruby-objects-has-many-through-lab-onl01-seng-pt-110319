@@ -18,7 +18,7 @@ def new_appointment(doctor, date)
 end 
 
 def appointments 
-  Appointment.all.select {|appointment|appointment.
+  Appointment.all.select {|appointment|
   
   
   
