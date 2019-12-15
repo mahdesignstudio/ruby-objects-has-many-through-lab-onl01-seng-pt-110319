@@ -22,8 +22,8 @@ def appointments
 end 
 
 def patients 
-  appointments.map {|appointment| .genre}
-
+  appointments.map {|appointment| appointment.patient}
+end 
 
 
 
